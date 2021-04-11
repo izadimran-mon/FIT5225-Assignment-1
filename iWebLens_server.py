@@ -138,28 +138,28 @@ ALLOWED_EXTENSIONS = {'jpeg'}
 app = Flask(__name__)
 # app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+# def allowed_file(filename):
+#     return '.' in filename and \
+#            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/upload', methods = ['POST'])
-def upload_file():
-    if request.method == 'POST':
-        data = json.loads(request.get_json())
-        image = data['image']
-        obj = {}
-        obj['id'] = data['id']
+# @app.route('/upload', methods = ['POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         data = json.loads(request.get_json())
+#         image = data['image']
+#         obj = {}
+#         obj['id'] = data['id']
         
-        output = np.frombuffer(base64.b64decode(image), dtype=np.uint8)
-        image = cv2.imdecode(output, cv2.IMREAD_COLOR)
-        nets = load_model(CFG, Weights)
-        obj['objects'] = do_prediction(image, nets, Lables)
+#         output = np.frombuffer(base64.b64decode(image), dtype=np.uint8)
+#         image = cv2.imdecode(output, cv2.IMREAD_COLOR)
+#         nets = load_model(CFG, Weights)
+#         obj['objects'] = do_prediction(image, nets, Lables)
 
-        return json.dumps(obj)
+#         return json.dumps(obj)
 
 @app.route("/")
 def hello():
     return "Hello World!"
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', threaded=True, processes=1)
+    app.run(host='0.0.0.0')
