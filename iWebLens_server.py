@@ -157,6 +157,9 @@ def upload_file():
 
         return json.dumps(obj)
 
+@app.route("/")
+def hello():
+    return "Hello World!"
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port='5000', threaded=True, processes=1)
+    app.run(host='0.0.0.0', port='5000', threaded=True, processes=1)
