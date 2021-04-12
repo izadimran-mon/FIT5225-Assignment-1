@@ -1,7 +1,7 @@
 FROM python:3.7-slim
 WORKDIR /code
-ADD iWebLens_server.py /code
-COPY requirements.txt requirements.txt
+ADD . /code
+COPY requirements2.txt requirements2.txt
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r requirements2.txt
 CMD ["python", "/code/iWebLens_server.py"]
