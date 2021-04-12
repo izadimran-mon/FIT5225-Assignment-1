@@ -1,6 +1,6 @@
 # import the necessary packages
-import numpy as np
-# import sys
+# import numpy as np
+import sys
 import time
 import cv2
 import os
