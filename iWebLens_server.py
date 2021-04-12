@@ -1,13 +1,13 @@
-# # import the necessary packages
-# import numpy as np
-# import sys
-# import time
-# import cv2
-# import os
+# import the necessary packages
+import numpy as np
+import sys
+import time
+import cv2
+import os
 
-# import base64
+import base64
 from flask import Flask, request
-# import json
+import json
 
 # # construct the argument parse and parse the arguments
 # confthres = 0.3
