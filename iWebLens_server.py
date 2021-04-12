@@ -1,9 +1,9 @@
 # import the necessary packages
 import numpy as np
-import sys
+# import sys
 import time
 import cv2
-# import os
+import os
 
 import base64
 from flask import Flask, request
