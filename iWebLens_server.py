@@ -135,7 +135,6 @@ app = Flask(__name__)
 # UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'jpeg'}
 
-app = Flask(__name__)
 # app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # def allowed_file(filename):
