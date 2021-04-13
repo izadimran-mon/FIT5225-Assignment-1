@@ -1,0 +1,25 @@
+astroid
+certifi==2020.12.5
+chardet==3.0.4
+click==7.1.2
+colorama==0.4.4
+Flask==1.1.2
+gunicorn
+idna==2.10
+isort
+itsdangerous==1.1.0
+Jinja2==2.11.3
+lazy-object-proxy==1.6.0
+MarkupSafe==1.1.1
+mccabe==0.6.1
+numpy
+opencv-python
+pylint==2.7.2
+python-dotenv==0.14.0
+pytz==2019.2
+requests==2.23.0
+toml==0.10.2
+urllib3==1.25.11
+wrapt==1.12.1
+
+RUN apt install libglu1-mesa-dev
