@@ -9,4 +9,5 @@ RUN python3 -m pip install --upgrade --force pip
 RUN python3 -m pip install -U setuptools
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install -r requirements2.txt
+EXPOSE 5000
 CMD ["python3", "/code/iWebLens_server.py"]
